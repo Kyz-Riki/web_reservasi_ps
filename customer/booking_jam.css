@@ -1,0 +1,262 @@
+/* Font & General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  padding: 30px 0;
+}
+
+/* Container Spacing */
+.container {
+  max-width: 1000px;
+  padding: 0 30px;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  border-radius: 15px 15px 0 0 !important;
+  padding: 20px 25px;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+/* Form Group Spacing */
+.form-group,
+.mb-3 {
+  margin-bottom: 25px;
+}
+
+/* Form Label */
+.form-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Varian Grid */
+.varian-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* Varian Box */
+.varian-box {
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.varian-box:hover {
+  border-color: #0d6efd;
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.1);
+}
+
+.varian-select-box {
+  display: block;
+  width: 100%;
+  padding: 25px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Styling untuk radio yang dicek */
+input[type="radio"]:checked + .varian-select-box {
+  background-color: #e7f1ff;
+  border-color: #0d6efd;
+}
+
+input[type="radio"]:checked + .varian-select-box::before {
+  content: "✓";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  background: #0d6efd;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+input[type="radio"]:checked + .varian-select-box .varian-title {
+  color: #0d6efd;
+}
+
+.varian-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.stok-label {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Stock Status Colors */
+.stock-high,
+.stock-medium,
+.stock-low {
+  padding: 12px 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
+.stock-high {
+  background-color: #28a745;
+  color: white;
+}
+
+.stock-medium {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.stock-low {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Form Controls */
+.form-control,
+.form-select {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Button Styling */
+.btn {
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+/* Table Styling */
+.table {
+  margin: 20px 0;
+}
+
+.table th {
+  padding: 15px;
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .varian-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .varian-select-box {
+    padding: 20px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+}
+
+/* Icon Styling */
+.ps-icon {
+  color: #0d6efd;
+  margin-right: 8px;
+}
+
+/* Alert Styling */
+.alert {
+  border-radius: 8px;
+  border: none;
+}
+
+/* Stock Info Styling */
+#info-stok {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.stock-available {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.stock-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.stock-unavailable {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Disable styling */
+input[type="radio"]:disabled + .varian-select-box {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f8f9fa;
+}
+
+input[type="radio"]:disabled + .varian-select-box:hover {
+  border-color: #e0e0e0;
+  box-shadow: none;
+}
